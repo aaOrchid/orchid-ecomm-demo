@@ -72,7 +72,7 @@ p.itemrow-all-data {
 .course p.itemrow-all-data{ height: 160px;}
 .sidebar .media-body {color:#000;}
 h1, h2, h3, h4, h5 {
-    font-family: "Roboto Slab";}
+    font-family: "Open Sans";}
 h2.subhead  {
     font-size: 24px;
 }
@@ -372,7 +372,7 @@ margin-top: 10px;}
 body > section, .section {padding: 40px 0!important;}
 #main-content {display:block; float:left; }
 #main-content a {
-    color: #4A2301;
+    color: #d60200;
     font-weight: 700;
 }
 /*.itemrow {
@@ -1077,7 +1077,9 @@ div#below-main-boxes>div {
 }
 .ckimage {
     overflow: hidden;
-    margin-bottom: 0;max-height: 150px;
+    margin-bottom: 0;
+    max-height: 150px;
+    border-radius:10px;
 }
 .staff-view .ckimage {
      max-height: 250px;
@@ -1629,8 +1631,9 @@ img.collection-img.no-img {
 /* Grid View CSS */
 
 #calendar_grid_view .find_more {
-    color: #000 !important;
+    color: #fff !important;
     background-color: #d60200;
+    border-radius:5px;
 font-weight: 700;
 padding: 10px 0;
 font-size: 16px !important;
@@ -2757,17 +2760,17 @@ div#calendar_grid_view > div.row > div:first-child {
 div#calendar_grid_view > div.row > div:nth-child(2) .subhead {
     margin-bottom: 15px;
     text-align: center;
-    font-family: "Roboto Slab";
+    font-family: "Open Sans";
     font-weight: 700;
-    color: #fff !important;
+    color: #000 !important;
     font-size: 30px;
 }
 div#calendar_grid_view > div.row > div:nth-child(3) .subhead {
     margin-bottom: 15px;
     text-align: center;
-    font-family: "Roboto Slab";
+    font-family: "Open Sans";
     font-weight: 700;
-    color: #fff !important;
+    color: #000 !important;
     font-size: 24px;
 }
 .ms-options-wrap > button:focus, .ms-options-wrap > button {
@@ -2859,7 +2862,7 @@ span.current-price, div#storecat h2 > a {
     border-bottom: 0 none;
     color: #777;
     font-size: 20px;
-    font-family: "Roboto Slab";
+    font-family: "Open Sans";
 }
 .widgetProduct a {
     color: #d60200!important;

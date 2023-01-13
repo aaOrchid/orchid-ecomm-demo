@@ -222,10 +222,15 @@ h2{
     border: 1px solid #fff;
 }
 
+.no-float{
+    float:none !important;
+}
+
 .btn-blue{
-    border: 1px solid #000 !important;
-    background-color:#000 !important;
-    color:#d60200 !important;
+    border: 1px solid #d60200 !important;
+    background-color:#d60200 !important;
+    border-radius:5px;
+    color:#fff !important;
     -webkit-transition: all 0.4s ease-in-out 0s;
     -moz-transition: all 0.4s ease-in-out 0s;
     -o-transition: all 0.4s ease-in-out 0s;
@@ -273,9 +278,9 @@ h2{
 }
 
 .btn-blue:hover{
-    border: 1px solid #000 !important;
+    border: 1px solid #d60200 !important;
     background-color:transparent !important;
-    color:#000 !important;
+    color:#d60200 !important;
 }
 
 .item{
@@ -464,6 +469,10 @@ h2{
     #slider.sitemessage{
         margin-bottom:25px;
     }
+
+    .about-image-full{
+        max-height:250px;
+    }
 }
 
 /************** Contact *****************/
@@ -578,9 +587,9 @@ span.sku_wrapper > span{
     height:auto;
 }
 
-p.itemrow-all-data{
-    background:#D9D9D9 !important;
-}
+/*p.itemrow-all-data{
+    background: !important;
+}*/
 
 .news1 h3, .news2 h3, .news3 h3{
     font-size:2.35em !important;
@@ -920,6 +929,7 @@ a .amount{
 
 .about-image-full{
     width:100%;
+    object-fit: cover;
 }
 
 .no-padding{
@@ -928,6 +938,7 @@ a .amount{
 
 .container .gunsmith{
     padding-left:0px !important;
+    display:inline;
 }
 
 .top-nav.dropdown ul.submenu li a:hover{
