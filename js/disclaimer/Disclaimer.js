@@ -27,6 +27,13 @@ class Disclaimer {
             this.backgroundElement.style.display = 'block';
             this.dialogElement.style.display = 'block';
 
+            this.centerDialog(); // Call centerDialog when loading the dialog
+
+            // Attach the centerDialog method to the window resize event
+            window.addEventListener('resize', () => {
+                this.centerDialog();
+            });
+
             this.dialogStatus = 1;
         }
     }
@@ -40,17 +47,18 @@ class Disclaimer {
         }
     }
 
-    centerDialog() {
-        const windowHeight = document.documentElement.clientHeight;
-        const windowWidth = document.documentElement.clientWidth;
-        const dialogHeight = parseInt(window.getComputedStyle(this.dialogElement).height);
-        const dialogWidth = parseInt(window.getComputedStyle(this.dialogElement).width);
+centerDialog() {
+    const windowHeight = document.documentElement.clientHeight;
+    const windowWidth = document.documentElement.clientWidth;
+    const dialogHeight = parseInt(window.getComputedStyle(this.dialogElement).height);
+    const dialogWidth = parseInt(window.getComputedStyle(this.dialogElement).width);
 
-        this.dialogElement.style.position = 'absolute';
-        this.dialogElement.style.top = (windowHeight / 2 - dialogHeight / 2).toString() + 'px';
-        this.dialogElement.style.left = (windowWidth / 2 - dialogWidth / 2).toString() + 'px';
-        this.backgroundElement.style.height = windowHeight;
-    }
+    this.dialogElement.style.position = 'fixed';
+    this.dialogElement.style.top = '50%';
+    this.dialogElement.style.left = '50%';
+    this.dialogElement.style.transform = 'translate(-50%, -50%)';
+    this.backgroundElement.style.height = windowHeight;
+}
 
     isAccepted() {
         try {
@@ -72,9 +80,9 @@ class Disclaimer {
 
     static generateDialog() {
         const code = `<div id="disclaimer-dialog">
-      <div class="center">
-      <h1>${strings.welcome}</h1>
-      <p class="italic">${strings.site_contains_adult_materials}</p>
+      <div class="center age-gate">
+      <h2>${strings.welcome}</h2>
+      <p class="italic" style="display:none;">${strings.site_contains_adult_materials}</p>
       <p class="bold">${strings.acknowledge_confirm_majority}</p>
       <p><button id="agree-over18" class="agree">${strings.button_over18}</button>
       <button id="disagree-under18" class="disagree">${strings.button_under18}</button></p>

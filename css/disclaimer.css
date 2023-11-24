@@ -8,7 +8,7 @@
     position: absolute;
     border-radius: 10px;
     z-index: 1002;
-    margin: 1rem;
+    /*margin: 1rem;*/
     min-width: 350px;
     background: #fff;
     border: 5px solid #666;
@@ -24,14 +24,15 @@
     }
 }
 
-#disclaimer-dialog h1 {
+#disclaimer-dialog h2 {
     text-align: center;
     font-weight: 700;
     padding: 3px;
+    margin-bottom: 3px;
 }
 
 #disclaimer-dialog p {
-    margin-top: 12px;
+    margin-top: 3px;
 }
 
 #disclaimer-background {
